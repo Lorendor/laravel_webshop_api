@@ -115,7 +115,7 @@ class OrderController extends Controller
     /**
      * Download products from an order.
      */
-    public function download(Request $request, Order $order): JsonResponse|\Illuminate\Http\Response
+    public function download(Request $request, Order $order): JsonResponse|\Illuminate\Http\Response|\Symfony\Component\HttpFoundation\BinaryFileResponse
     {
         $token = $request->query('token');
 
